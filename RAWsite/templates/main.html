@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>RAW Site Main Page</title>
+    <style>
+        .song-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #527f58ff;
+            
+        }
+
+        .pagination {
+            margin: 20px 0;
+        }
+
+        .pagination a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+{% csrf_token %}
+
+<div class='music-player'></div>
+{% for song in page_obj %}
+    <div class='song-card'>
+        {% if song.image %}
+            <img src='{{ song.image.url }}' alt="{{ song.title }}" width="100" height="100"/>
+        {% else %}
+            <img src='{% static "default_song_image.jpg" %}' alt="Default image" width="100" height="100"/>
+        {% endif %}
+    
+        <div class='song-info'>
+            <h2>{{ song.title }}</h2>
+            <h3>Artist: {{ song.artist }}</h3>
+            <h3>Album: {{ song.album }}</h3>
+            <p>Duration: {{ song.duration }}</p>
+        </div>
+        
+        <div class='leacteur'>
+            <audio controls>
+                {% if song.file %}
+                    <source src='{{ song.file.url }}' type='audio/mp3'>
+                {% elif song.audio_link %}
+                    <source src='{{ song.audio_link }}' type='audio/mp3'>
+                {% else %}
+                    <p>No audio available</p>
+                {% endif %}
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    <hr>
+{% endfor %}
+
+
+<footer>
+    <p>&copy; 2025 RAW Site</p>
+</footer>
+</body>
+</html>
