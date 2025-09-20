@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '.'
+          path: './RAWsite/templates/index.html'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4/RAWsite/templates/home
+        uses: actions/deploy-pages@v4
