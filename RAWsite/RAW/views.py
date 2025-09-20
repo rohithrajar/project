@@ -12,3 +12,6 @@ def index(request):
         page_obj = paginator.get_page(1)
     context = {'page_obj': page_obj}
     return render(request,'main.html', context)
+
+def home(request):
+    return render(request,'index.html')
