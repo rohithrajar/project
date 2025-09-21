@@ -10,7 +10,7 @@ class Song(models.Model):
     audio_link=models.CharField(max_length=50,blank=True,null=True)
     lyrics=models.TextField(blank=True,null=True)
     duration=models.CharField(max_length=20)
-    paginate_by=2
+    paginate_by=2   
     
     def __str__(self):
-        return self.title+" - "+self.artist
+        return self.title+" - "+self.artist   
