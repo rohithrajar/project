@@ -37,8 +37,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
             # Set this to your static site build output directory, e.g. 'dist' or 'build'
-            path: './RAWsite/templates'
-          path: '.'
+          
+         path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
