@@ -7,8 +7,8 @@
 
 /* Body Styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e7ff 100%);
     color: #222;
     line-height: 1.6;
 }
@@ -16,16 +16,22 @@ body {
 /* Container */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(60,60,120,0.12);
 }
 
 /* Header */
 header {
-    background: #222;
+    background: linear-gradient(90deg, #222 60%, #4f8cff 100%);
     color: #fff;
-    padding: 20px 0;
+    padding: 32px 0 24px 0;
     text-align: center;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    letter-spacing: 2px;
 }
 
 /* Navigation */
@@ -33,38 +39,42 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 32px;
+    margin-top: 10px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.2s;
+    font-size: 1.1em;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 nav a:hover {
-    color: #ff9800;
+    background: #ff9800;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(255,152,0,0.18);
 }
 
 /* Main Content */
 main {
-    padding: 40px 0;
-    padding-bottom: 60px; /* Prevents footer overlap */
+    padding: 48px 0 80px 0;
 }
 
 /* Footer */
 footer {
-    background: #222;
+    background: linear-gradient(90deg, #222 60%, #4f8cff 100%);
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 16px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+    font-size: 1.05em;
 }
 
-/* Custom Background Color Utility */
-.bg-custom {
-    background-color: #7da59b;
-}
+/* Song Card */

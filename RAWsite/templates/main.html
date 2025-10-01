@@ -6,23 +6,45 @@
     <title>RAW Site Main Page</title>
     <style>
         .song-card {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 5px;
-            background-color: #527f58ff;
-            
+            border: none;
+            background: linear-gradient(120deg, #a2f4a1ff 60%, #a2d9f1ff 100%);
+            padding: 24px;
+            margin: 18px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(79,140,255,0.10);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
+        .song-card:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(79,140,255,0.18);
+        }
+
+
         .pagination {
-            margin: 20px 0;
+            margin: 32px 0;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
         }
 
         .pagination a {
-            margin: 0 10px;
+            margin: 0 8px;
             text-decoration: none;
-            color: #007bff;
+            color: #4f8cff;
+            background: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+            transition: background 0.2s, color 0.2s;
+            font-weight: 500;
         }
+
+        .pagination a:hover {
+            background: #4f8cff;
+            color: #fff;
+        }
+        
     </style>
 </head>
 <body>
