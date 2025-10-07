@@ -11,10 +11,10 @@ var audio = {
             if (media.length){
                 media.mediaelementplayer({
                     audioHeight:40,
-                features: ['playpause','current','duration','progress','volume','tracks','fullscreen'],
+                features: ['playpause','current','duration','progress','volume','tracks'],
                     alwaysShowControls: true,
                     timeAndDurationsSeparator:'<span></span>',
-                    iPaduseNativeControls: true,
+                    iPadUseNativeControls: true,
                     iPhoneUseNativeControls: true,
                     AndroidUseNativeControls: true,
 
